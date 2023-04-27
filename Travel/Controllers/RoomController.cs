@@ -1,4 +1,4 @@
-﻿using AutoMapper;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Travel.Dtos;
@@ -32,9 +32,14 @@ namespace Travel.Controllers
             return Ok(rooms);
         }
 
-        [HttpGet("/GetAllRoomsAvailable")]
-        public async Task<ActionResult<PagerResponse<Room>>> GetAllRoomsAvailable([FromQuery] PagerRequest pager, [FromQuery] RoomAvailableDto roomAvailableDto)
+        [HttpGet("/GetAllRoomsAvailable/{DateCheckIn}/{DateCheckOut}/{Location}/{NumberPerson}")]
+        public async Task<ActionResult<PagerResponse<RoomAvailable>>> GetAllRoomsAvailable( DateTime DateCheckIn, DateTime DateCheckOut, string Location, int NumberPerson, [FromQuery] PagerRequest pager)
         {
+            RoomAvailableDto roomAvailableDto = new RoomAvailableDto();
+            roomAvailableDto.DateCheckIn = DateCheckIn;
+            roomAvailableDto.DateCheckOut = DateCheckOut;
+            roomAvailableDto.Location = Location;
+            roomAvailableDto.NumberPerson = NumberPerson;
             var rooms = await _roomService.GetAllRoomsAvailable(pager, roomAvailableDto);
             return Ok(rooms);
         }

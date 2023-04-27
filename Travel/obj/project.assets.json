@@ -2436,11 +2436,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\Personal\\Prueba Tecnica\\Travel\\Travel\\Travel.csproj",
+      "projectUniqueName": "D:\\Documents\\travelback\\Travel\\Travel\\Travel.csproj",
       "projectName": "Travel",
-      "projectPath": "D:\\Documents\\Personal\\Prueba Tecnica\\Travel\\Travel\\Travel.csproj",
+      "projectPath": "D:\\Documents\\travelback\\Travel\\Travel\\Travel.csproj",
       "packagesPath": "C:\\Users\\Family\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\Personal\\Prueba Tecnica\\Travel\\Travel\\obj\\",
+      "outputPath": "D:\\Documents\\travelback\\Travel\\Travel\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Family\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,4 +1,4 @@
-﻿using Dapper;
+using Dapper;
 using Microsoft.Data.SqlClient;
 using System.Data;
 using Travel.Dtos;
@@ -51,7 +51,7 @@ namespace Travel.Repositories
             var parameters = new
             {
                 hotelCreateDto.HotelName,
-                hotelCreateDto.HotelLocalion,
+                hotelCreateDto.HotelLocation,
                 hotelCreateDto.Value,
                 hotelCreateDto.UrlImage,
                 hotelCreateDto.Status,
@@ -67,7 +67,7 @@ namespace Travel.Repositories
             {
                 hotelUpdateDto.HotelId,
                 hotelUpdateDto.HotelName,
-                hotelUpdateDto.HotelLocalion,
+                hotelUpdateDto.HotelLocation,
                 hotelUpdateDto.Value,
                 hotelUpdateDto.UrlImage,
                 hotelUpdateDto.Status,
